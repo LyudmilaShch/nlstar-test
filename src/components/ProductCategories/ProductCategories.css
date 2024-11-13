@@ -1,0 +1,32 @@
+.categories__contain {
+    margin: 40px 0;
+}
+
+.categories__title {
+    padding-bottom: 20px;
+}
+.categories__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minMax(271px, 1fr));
+    gap: 22px;
+}
+
+.categories__list > div {
+    aspect-ratio: 1.78/1;
+}
+
+@media (max-width: 960px) {
+    .categories__list {
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minMax(220px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .categories__list {
+        grid-template-columns: repeat(auto-fill, minMax(175px, 1fr));
+    }
+    .categories__title {
+        text-align: center;
+    }
+}

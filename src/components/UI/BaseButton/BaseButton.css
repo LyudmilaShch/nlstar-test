@@ -1,0 +1,40 @@
+.base-button {
+    position: relative;
+}
+
+.base-button_active::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: var(--border-radius);
+    display: block;
+    width: calc(100% - 10px);
+    height: 100%;
+    background: linear-gradient(
+            270deg,
+            rgba(255, 168, 0, 0.6) 0%,
+            rgba(255, 111, 0, 0.6) 100%
+    );
+    filter: blur(14px);
+}
+
+.base-button__submit {
+    position: relative;
+    z-index: 1;
+    padding: 11px 22px;
+    font-size: 16px;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    height: 48px;
+    border-radius: 24px;
+    transition: color 0.2s ease, background 0.2s ease;
+    color: var(--color-white);
+    background: linear-gradient(270deg, #ffa800 0%, #ff6f00 60.2%);
+    border: none;
+}
+
+.base-button__submit:disabled {
+    color: rgba(39, 39, 39, 0.5);
+    border: 2px solid rgba(151, 151, 151, 0.3);
+    background: transparent;
+}

@@ -1,0 +1,31 @@
+.product-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.78/1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.03);
+}
+.product-card__title {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    font-size: 24px;
+}
+.product-card__image {
+    display: block;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+@media (max-width: 1023px) {
+    .product-card__title {
+        font-size: 20px;
+    }
+}
